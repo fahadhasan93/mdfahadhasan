@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Education & Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style-responsive.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">FAHAD HASAN</a>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="education.html" class="active">Education & Experience</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Education Section -->
+  <section class="education-section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2022 - 2025</div>
+        <div class="timeline-content">
+          <h3>Bachelor's in Computer Science</h3>
+          <p>Green University of Bangladesh, Dhaka</p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2019 - 2021</div>
+        <div class="timeline-content">
+          <h3>Master's in xyz</h3>
+          <p>ABC Institute</p>
+        </div>
+      </div>
+      <!-- Timeline Item 3 -->
+       <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2019 - 2020</div>
+        <div class="timeline-content">
+          <h3>Higher Secondary Certificate (Science)</h3>
+          <p>Daffodil International College, Chandpur </p>
+        </div>
+      </div>
+      <!-- Timeline Item 4 -->
+       <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-content">
+          <h3>Secondary School Certificate</h3>
+          <p>Hasan Ali Govt. High School, Chandpur </p>
+        </div>
+      </div>
+      <!-- Additional Education Items as needed -->
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience-section">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <!-- Timeline Item 1 -->
+      <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2017 - 2018</div>
+        <div class="timeline-content">
+          <h3>Web Developer – Company</h3>
+          <p>
+            xyz
+          </p>
+        </div>
+      </div>
+      <!-- Timeline Item 2 -->
+      <div class="timeline-item card-glow card-glow-hover card-glow-active">
+        <div class="timeline-year">2018 - 2019</div>
+        <div class="timeline-content">
+          <h3>Senior Web Developer – Company</h3>
+          <p>
+            xyz
+          </p>
+        </div>
+      </div>
+     
+      <!-- Additional Experience Items as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-left">
+        <h3>ML Engineer</h3>
+        <p>&copy; 2025 MD. Fahad Hasan. All rights reserved.</p>
+      </div>
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com/fahadhasan93" class="social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/md-fahad-hasan-61720a350" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://hackerrank.com/mdfahadhasan627" class="social-icon"><i class="fab fa-hackerrank"></i></a>
+          <a href="https://leetcode.com/mdfahadhasan" class="social-icon"><i class="fas fa-code"></i></a>
+          <a href="https://www.kaggle.com/fahadhasan93" class="social-icon"><i class="fab fa-kaggle"></i></a>
+          <a href="https://facebook.com/profile.php?id=100027571990918" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/fahad_hasan_mithu" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/Fahad_Hasan20" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://mail.google.com/mail/?view=cm&to=mdfahadhasan627@gmail.com" target="_blank" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for Scroll Animations -->
+  <script src="navigation.js"></script>
+  <script>
+    // Use IntersectionObserver for fade-in effect on timeline items
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".timeline-item").forEach(item => {
+      observer.observe(item);
+    });
+  </script>
+</body>
+</html>
